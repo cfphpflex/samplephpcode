@@ -1,0 +1,263 @@
+
+<div id="page">	
+
+     
+		    <script type="text/javascript">
+		      
+						
+				 $(document).ready(function() 	{   
+					// Set U
+					var URLGetMaritzProducts 	=  'http://localhost/localPathmanagerscontroller/getmanagersdata';
+					 
+	    		
+		    		//Instanciate Grid 
+		            jQuery("#NewHiresGrid").jqGrid(   
+		            
+		            		 { 
+							  	url		:		'http://localhost/localPathmanagerscontroller/getmanagersdata', //CFC that will return the users
+		        				datatype:   	'json', //We specify that the datatype we will be using will be JSON
+		        				 
+		        				// STEP 1   must match the the number of col items
+		        				colNames:   	[   'id', 'Manager Name'   ], //Column Names
+								//The Column Model to define the data. Note you can make columns non sortable, specify width, alignment, etc.
+		        				// Requirement: must match colNames and  sql query fields
+        				
+			             		colModel: [
+									{name:'manager_id',index:'manager_id', width:80, sorttype:"int",editable:false },
+								   	{name:'manager_name_vc',index:'manager_name_vc', width:1060, sorttype:"text", 
+		                                    						editable:true,edittype:"text",editoptions:{ },editrules:{required:true},formoptions:{elmprefix:"(*)"}} 	                                              
+		                            ],
+						    
+						    
+							 	viewrecords: 	true,
+	                            gridview: 		true,
+	                            pager:      	$('#pager'), //The div we have specified, tells jqGrid where to put the pager
+	            				rowNum:     	15, //Number of records we want to show per page
+	            				rowNewHiresGrid:    	[20,30,40,50], //Row NewHiresGrid, to allow user to select how many rows they want to see per page  no values = disabled
+	            				sortorder:  	"asc",  //'desc',      //Default sort order
+	            				sortname:   	"manager_id", //Default sort column
+	            				viewrecords: 	true, //Shows the nice message on the pager
+	            				imgpath:        'ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/', //Image path for prev/next etc images
+	            				caption:        'Admin: Managers', //Grid Name
+
+
+								multiselect: false,   // Checkbox to multi selected
+								loadonce: false,
+								jsonReader: {
+								repeatitems: false,
+								root: function (obj) { return obj; },
+								page: function (obj) { return $("#list").jqGrid('getGridParam', 'page'); },
+								total: function (obj) { return Math.ceil(obj.length / $("#list").jqGrid('getGridParam', 'rowNum')); },
+								records: function (obj) { return obj.length; }
+								},
+								
+								
+	            				recordtext:     "Record {0} - {1} of {2}",//Pager information to show
+	            				rownumbers:      false,//Show row numbers
+	            				rownumWidth:     "40",//Width of the row numbers column
+	            				sortable:        true,
+	            		       	height:          'auto',
+	                            width:           'auto', //I like auto no blank space between. Using a fixed height can mean either a scrollbar or a blank space before the pager
+	            				mtype:           'POST',
+	            				
+	            				//	toolbar:         [true,"top"], //Shows the toolbar at the top. We will use it to display user feedback
+	            				
+                                    		
+            				//ipad, iphone single click works best
+            			
+            				onSelectRow: 	 function(id){
+                                   			 // jQuery('#NewHiresGrid').editRow(id); //, true
+                                    		 jQuery('#NewHiresGrid').jqGrid('editRow',id,true);
+                                },
+                                    				 
+                                     				 	 
+            				loadComplete: 	 function(){
+                                   			 // jQuery('#NewHiresGrid').editRow(id); //, true
+                                    			$('#NewHiresGrid').jqGrid('setColProp', 'id',
+										                                {
+									                                      edittype: 'text',
+														                  searchoptions: {
+														                        			size: '20',
+														                        			maxlength: '30'
+														                    			  }
+										                                }
+									                                )
+                                },
+                                    				 
+                             
+            				//The JSON reader. This defines what the JSON data returned from the CFC should look like
+            				jsonReader: {                                    					
+                        				    root:       "ROWS", //our data
+                                            page:       "PAGE", //current page
+                                            total:      "TOTAL", //total pages
+                                            records:    "RECORDS", //total records
+                        					userdata:   "USERDATA", //Userdata we will pass back for feedback
+                        					cell:       "", //Not Used
+                        					id:         "0" //Will default to first column
+
+            					        },
+            			
+            				editurl:"http://localhost/localPathmanagerscontroller/getmanagersdata" //The Add/Edit function call	
+            				
+            				
+            				}   //END JDGRID
+                          ).navGrid('#pager', {  add: true, del: true, refresh: true, search: false, edit: false } //,
+                       );			
+                           
+                           
+                                    	
+                        	
+						 //   jQuery("#NewHiresGrid").jqGrid('navGrid', '#pager', { add: false, edit: false, del: false },{}, {}, {}, { multipleSearch: true, overlay: false });
+						//    jQuery("#NewHiresGrid").jqGrid('filterToolbar', { stringResult: true, searchOnEnter: true, defaultSearch: 'cn' });
+						   jQuery("#NewHiresGrid").jqGrid('navButtonAdd', '#pager',{ caption: "", title: "Toggle Searching Toolbar",buttonicon: 'ui-icon-pin-s',onClickButton: function () { NewHiresGrid[0].toggleToolbar(); }});
+									      
+								              
+						                    //data obj
+						                    var columnNames = new Array();
+											columnNames[0] = "status";
+											 
+											 
+											//call function
+											setSearchSelectcategoryThree_vc(columnNames);
+											
+											//function 
+											function setSearchSelectcategoryThree_vc(columnNames) 
+											{
+											  		// alert (  columnNames );
+						                     		textsLength = columnNames.length;
+						                    		//alert ( 'len' + textsLength);
+									                 
+									                  for (i=0;i<textsLength;i++) {
+									                     	columnName = columnNames[i];  									                    									  
+										                     		 if (columnName !== undefined ) {
+										                     		 								                     		 
+															                     		$('#NewHiresGrid').jqGrid('setColProp', columnName,
+																					                                 {    	 stype: 'select',
+																									  						 searchoptions: {  	value:"all:Filter by;active:Active;terminated:Terminated;",
+																														 	 					sopt:['eq']
+																											          						}
+																								  					 }
+															                                 			       )
+										                     		 								}        
+								                           
+									                    						   }
+								                    
+								              	};
+								              	
+								             //data obj
+								             
+								         
+								         
+								    //data obj
+						            var columnNames = new Array();         
+									columnNames[0] = "status";
+									  
+											//call function
+											setSearchSelectcategoryallothers(columnNames);
+											
+											//function 
+											function setSearchSelectcategoryallothers(columnNames) 
+											{
+											  		// alert (  columnNames );
+						                     		textsLength = columnNames.length;
+						                    		//alert ( 'len' + textsLength);
+									                 
+									                  for (i=0;i<textsLength;i++) {
+													                     	         columnName = columnNames[i];  									                    									  
+														                     		 if (columnName !== undefined ) {
+														                     		 								                     		 
+																			                     		                $('#NewHiresGrid').jqGrid('setColProp', columnName,
+																							                                      {																                                
+																							                              		 	edittype: 'text',
+																								                  					searchoptions: 
+																									                  					{
+																									                        				size: '20',
+																									                        				maxlength: '30'
+																									                    			  	}								     
+																							                                       }
+																			                                 			       )
+														                     		 								}        
+												                           
+													                    		  }
+								                    
+								              	};
+								              	
+								            							
+														
+										// MASTER control filter toolbar below column names  DO NOT MOVE from here 
+										//jQuery("#NewHiresGrid").jqGrid('filterToolbar', { autosearch: true, stringResult: true, searchOnEnter: true, groupOp:'AND'});
+										
+									   $('#NewHiresGrid').jqGrid('filterToolbar', { searchOnEnter: false, enableClear: false });
+										//jQuery("#NewHiresGrid").jqGrid('filterToolbar', {stringResult: true, searchOnEnter: false, defaultSearch:"eq"   });																        
+																					
+																        
+								 	 
+                                    	 
+                                               
+                                                $(function(){
+	                                                //  $('#NewHiresGrid').jqGrid('navGrid', "#pager", { caption: "", buttonicon: "ui-icon-plusthick", onClickButton: function () { alert('Exporting!!!!!'); }, position: "last", title: "Export to Excel", cursor: "pointer" })
+										 			//$('#NewHiresGrid').jqGrid('navGrid',"#pager",{edit:false,add:false,del:false,search:true,refresh:false}); //,search:false,refresh:false
+                                                });
+                                       
+				                									 
+									setControlToolbarFilter(columnNames);
+											//function 
+										function setControlToolbarFilter(columnNames) 
+										{
+																				
+																				
+														//alert (  columnNames );    //
+												          textsLength = columnNames.length;
+												          //  alert ( 'len' + textsLength);
+						                 				  
+						                 				  //START for loop  
+						                 				  // INPUT TYPE
+						                 				   // values to display and send
+						                 				     // operator value in the select drop options
+											                  for (i=0;i<textsLength;i++) 
+												                  { 
+												                    
+														           } 
+												             // END FOR loop
+												            
+												  			
+				                   
+							              		};
+              
+			            		//END control toolbar filter
+						 
+                                              
+ 
+                                        		//Function will be called when add/edit encounters an error. The returned message is what will be shown to user	
+                                        		function commonError(data)
+                                        	    	{			
+                                        		    	return "Error Occured during Operation. Please try again";
+                                        	    	}
+                                    		
+                                    		
+                                    			
+                                    		}
+                                    	);
+
+                                      
+                                             //    alert("test3");
+        </script>
+        
+ 
+	 
+    <div id="pager" class="scroll" style="text-align:center;"></div>
+    <div id="mysearch"></div>
+    <table id="NewHiresGrid" class="scroll"  cellpadding="2" cellspacing="2" >
+	    
+    
+
+</div>
+</div>
+ 
+
+</body>
+</html>
+
+
+
+
