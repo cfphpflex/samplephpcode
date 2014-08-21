@@ -12,16 +12,16 @@ class Somethingcontroller extends CI_Controller {
 	   {
 	      $this->load->model('host'); 
 	      $this->load->view('HeaderNav.php', $this);
-		  $this->load->view('getSomethingview', $this);		
+	      $this->load->view('getSomethingview', $this);		
 		
-		}
+	  }
 	
-	 public function getSomethingdata()
-		{
-			$this->load->model('host'); 
-		    //$this->load->view('HeaderNav.php', $this);
-			$this->load->view('getSomethingdata', $this);
-		}
+       public function getSomethingdata()
+	 {
+	      $this->load->model('host'); 
+	      //$this->load->view('HeaderNav.php', $this);
+	      $this->load->view('getSomethingdata', $this);
+	}
 	
    
 
