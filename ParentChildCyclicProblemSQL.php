@@ -19,10 +19,7 @@ g=7
 Parent:chile
 OK = 1>2>3>4>5>6>7>8>9>10
 BAD= 2>1
-b= parent  2
-a =child   1
---1.  get all parent to child relationships
-
+ 
 --create db
 create database sonyplayparentchild
 character set 'utf8'
