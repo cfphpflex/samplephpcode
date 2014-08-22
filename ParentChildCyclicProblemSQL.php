@@ -1,5 +1,7 @@
+<?php
 
 
+/*
 o   Ex. If A > B > C > D, then the following are not allowed: B > A, C > A, C > B, D > A, D > B, D > C
 
 o   A > D is okay, B > F is okay
@@ -45,3 +47,8 @@ INSERT INTO sonyplayparentchild.groups(group_id, group_name, groupParent_id) VAL
 INSERT INTO sonyplayparentchild.groups(group_id, group_name, groupParent_id) VALUES (8, '8', 3);
 INSERT INTO sonyplayparentchild.groups(group_id, group_name, groupParent_id) VALUES (9, '9', 6);
 INSERT INTO sonyplayparentchild.groups(group_id, group_name, groupParent_id) VALUES (10, '10', 9);
+
+*/
+
+
+?>
