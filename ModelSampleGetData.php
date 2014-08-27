@@ -1,14 +1,9 @@
 <?php
 /**
  * CodeIgniter
- Model simple  example 
+ 
  */
-	
-
-	 	// ENV
- 		$this ->environment 	= isset($_SERVER['HTTP_HOST'])?$_SERVER['HTTP_HOST']:'localhost';   //Page user is on
-			
-		 
+	 
 	 	// DECLARE 	MYSQL HOST INFO
 	    	$this ->hostIP = "127.0.0.1";	// API
 		$this ->id = 0;            		// id
@@ -18,22 +13,7 @@
 		 
 		// DECLARE SEARCH PARAM DEFAULTS
 	 	$this -> page 		= isset($_POST['page'])?$_POST['page']:1;   	 //Page user is on
-	 	$this -> rows 		= isset($_POST['rows'])?$_POST['rows']:10;  	//Number of Rows to display per page
-	 	$this -> sidx 		= isset($_POST['sidx'])?$_POST['sidx']:"";  	//Sort Column
-	 	$this -> sord 		= isset($_POST['sord'])?$_POST['sord']:"ASC";  //Sort Order
-	 	$this -> nd 		= isset($_POST['nd'])?$_POST['nd']:0;    
-	 	$this -> _search 	= isset($_POST['_search'])?$_POST['_search']:false;  		//Whether search is performed by user on data grid
-	 	$this -> searchField 	= isset($_POST['searchField'])?$_POST['searchField']:"";  	//Field to perform Search on
-	 	$this -> searchOper 	= isset($_POST['searchOper'])?$_POST['searchOper']:"";  	//Search Operator Short Form"
-	 	$this -> searchString 	= isset($_POST['searchString'])?$_POST['searchString']:"";   //Search Text
-		  
-	  	$this -> arrUsers 	= array(); 
-	    	$this -> strMsg 	= "";
-	    	$this -> strMsgType 	= "success";
-	    	$this -> records 	= "";
-		$this -> blnSearch 	= "";
-		$this -> strMsg 	= false;
-		$this -> strSearch 	= "";
+	       
 		    
 		    
 		    
@@ -62,7 +42,7 @@
     			 $debug = isset($_GET['debug'])?$_GET['debug'] : 0 ;
    				 
       			//$curdate = date("d-m-Y");
-	             $curdate = "2014-6-05";
+	             $curdate = "2012-3-25";
 	              
 			 	//order by
 		         $sidx = (isset($_POST['sidx']))?$_POST['sidx'] : 'Something_name_vc';
