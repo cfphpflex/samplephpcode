@@ -7,24 +7,24 @@
 						
 				 $(document).ready(function() 	{   
 					// Set U
-					var URLGetMaritzProducts 	=  'http://localhost/localPathmanagerscontroller/getmanagersdata';
+					var URLGetMaritzProducts 	=  'http://localhost/localPathsomethingscontroller/getsomethingsdata';
 					 
 	    		
 		    		//Instanciate Grid 
-		            jQuery("#NewHiresGrid").jqGrid(   
+		            jQuery("#somedivnamebelow").jqGrid(   
 		            
 		            		 { 
-							  	url		:		'http://localhost/localPathmanagerscontroller/getmanagersdata', //CFC that will return the users
+							  	url		:		'http://localhost/localPathsomethingscontroller/getsomethingsdata', //CFC that will return the users
 		        				datatype:   	'json', //We specify that the datatype we will be using will be JSON
 		        				 
 		        				// STEP 1   must match the the number of col items
-		        				colNames:   	[   'id', 'Manager Name'   ], //Column Names
+		        				colNames:   	[   'id', 'something Name'   ], //Column Names
 								//The Column Model to define the data. Note you can make columns non sortable, specify width, alignment, etc.
 		        				// Requirement: must match colNames and  sql query fields
         				
 			             		colModel: [
-									{name:'manager_id',index:'manager_id', width:80, sorttype:"int",editable:false },
-								   	{name:'manager_name_vc',index:'manager_name_vc', width:1060, sorttype:"text", 
+									{name:'something_id',index:'something_id', width:80, sorttype:"int",editable:false },
+								   	{name:'something_name_vc',index:'something_name_vc', width:1060, sorttype:"text", 
 		                                    						editable:true,edittype:"text",editoptions:{ },editrules:{required:true},formoptions:{elmprefix:"(*)"}} 	                                              
 		                            ],
 						    
@@ -35,10 +35,10 @@
 	            				rowNum:     	15, //Number of records we want to show per page
 	            				rowNewHiresGrid:    	[20,30,40,50], //Row NewHiresGrid, to allow user to select how many rows they want to see per page  no values = disabled
 	            				sortorder:  	"asc",  //'desc',      //Default sort order
-	            				sortname:   	"manager_id", //Default sort column
+	            				sortname:   	"something_id", //Default sort column
 	            				viewrecords: 	true, //Shows the nice message on the pager
 	            				imgpath:        'ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/redmond/', //Image path for prev/next etc images
-	            				caption:        'Admin: Managers', //Grid Name
+	            				caption:        'Admin: somethings', //Grid Name
 
 
 								multiselect: false,   // Checkbox to multi selected
@@ -97,7 +97,7 @@
 
             					        },
             			
-            				editurl:"http://localhost/localPathmanagerscontroller/getmanagersdata" //The Add/Edit function call	
+            				editurl:"http://localhost/localPathsomethingscontroller/getsomethingsdata" //The Add/Edit function call	
             				
             				
             				}   //END JDGRID
@@ -231,7 +231,7 @@
                                         		//Function will be called when add/edit encounters an error. The returned message is what will be shown to user	
                                         		function commonError(data)
                                         	    	{			
-                                        		    	return "Error Occured during Operation. Please try again";
+                                        		    	return "Error Occured friendly message";
                                         	    	}
                                     		
                                     		
