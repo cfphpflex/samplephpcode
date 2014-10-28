@@ -1,12 +1,7 @@
 <?php
 
    
-/**
- * CodeIgniter
- 
- 
- Here’s the last part of the groups database model we discussed at the end of the code test.
- 
+/***
 Given:
 -          Users can belong to groups
 
