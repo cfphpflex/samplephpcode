@@ -1,8 +1,7 @@
 <?php
 
    
-/**
- * CodeIgniter
+/**  PREVENT CYCLIC GROUP REFERENCES
  
  
  Here’s the last part of the groups database model we discussed at the end of the code test.
