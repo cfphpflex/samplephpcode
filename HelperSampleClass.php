@@ -1,6 +1,7 @@
 <?php
 /**
- * CodeIgniter HELPER
+ * Make a helper function or use built in get_hostname  function to get the environtments hostname
+ * this addresses the the basic need to know what environment code is running for configuration purposes
   
  */
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
