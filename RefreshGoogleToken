@@ -1,0 +1,50 @@
+<?php
+ 
+/***************************************************************************
+			 * Index Function: get a new token if old one expired
+			 * Description: if token expired, refresh it
+			 * Parameters: key (string) - application consumer key
+			 *             secret (string) - application consumer secret
+			 *             refresh_token (string) - refresh_token parameter passed in
+			 *             to fetch access token request.
+			 
+***************************************************************************/
+
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+ 
+class refreshGoogleToken extends CI_Model {
+ 
+   public  function getNewToken(){
+        
+			$sTokenURL			= "https://accounts.google.com/o/oauth2/token";
+			$sRefreshToken 		= "refreshtoken";
+			$sClientID			= "id";
+			$sClient_secret		= "clientsecre";
+			$sGrant_type		= "refresh_token";
+ 
+
+			$aParms=array(
+			    'refresh_token' 	=>$sRefreshToken,
+			    'client_id'     	=>$sClientID,
+			    'client_secret'		=>$sClient_secret,
+			    'grant_type'		=>$sGrant_type
+				);
+ 
+  
+		 	$cURL=curl_init();
+			curl_setopt($cURL,CURLOPT_URL,$sTokenURL);
+			curl_setopt($cURL,CURLOPT_SSL_VERIFYPEER,TRUE);
+			curl_setopt($cURL,CURLOPT_POST, TRUE);
+			curl_setopt($cURL,CURLOPT_RETURNTRANSFER, TRUE);
+			curl_setopt($cURL,CURLOPT_POSTFIELDS,$aParms);
+	 
+			$cResponse=trim(curl_exec($cURL));
+			$sError=curl_error($cURL);
+			curl_close($cURL);
+  
+		 return json_decode($cResponse);
+ 
+ 
+    }// END FUNCTION
+
+}  //END CLASS
