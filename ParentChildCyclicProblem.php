@@ -1,28 +1,17 @@
 <?php
 
    
-/***
-Given:
--          Users can belong to groups
+/***  MORE COMPLEX CYCLIC parent child relationship problem often found in user role models for login and basic entity relationships
+Given:  Users can belong to groups
+         Groups can belong to other groups (thus creating a group hierarchy)
 
--          Groups can belong to other groups (thus creating a group hierarchy)
-
-Problem:
-               
- 
--          Prevent cyclic group relations when inserting a new parent-child relationship.
-
+Problem:  Prevent cyclic group relations when inserting a new parent-child relationship. 
 o   Ex. If A > B > C > D, then the following are not allowed: B > A, C > A, C > B, D > A, D > B, D > C
-
 o   A > D is okay, B > F is okay
-
 -          Implement function createParentChildRelationship($parent, $child)
-
 -          Return true if successful, or false if the parent-child relationship is not allowed.
-
  
-
-
+ Case Scenario
   Ex. If A > B > C > D, then the following are not allowed: B > A, C > A, C > B, D > A, D > B, D > C
   A > D is okay, B > F is okay
 
@@ -35,7 +24,7 @@ E=5
 F=6
 g=7
 
-
+Case Scenario:
 Parent:child linked list relationship
 OK = 1>2>3>4>5>6>7>8>9>10
 BAD= 2>1 to reverse parent child relationship for existing parent child relationship
@@ -43,9 +32,7 @@ b= parent  2
 a =child   1
 
 --1.  get all parent to child relationships
-
- 
-    
+   
  **/
    
     
@@ -77,12 +64,12 @@ a =child   1
 			$ci=& get_instance(); 
 			$ci->load->model('host');
 			$myHost = $ci->host->myhost();  		// inst. above function_exists(string function_name)
-	        $db = $this->dbmodel();
+	        	$db = $this->dbmodel();
 	      
-			$sql = $db->prepare($SQL);				// 2. PREP SQL STMT			
-			$sql->execute();  						// 3. Execute SQL STME	
+			$sql = $db->prepare($SQL);			// 2. PREP SQL STMT			
+			$sql->execute();  				// 3. Execute SQL STME	
 			$getallrecords = $sql->fetchAll();  		// 4. GET Records	
-			return $getallrecords;  					// 5. RETURN ALL RECORDS
+			return $getallrecords;  			// 5. RETURN ALL RECORDS
 						 
 		  } catch( Exception $e ) { return ($e->getLine() . ": " . $e->getMessage() . " : \n" . $e->getTraceAsString()); }  //CATCH END
  
