@@ -1,6 +1,16 @@
 
-<!--- GET up and running quickly using customizable grid for displaying records using AJAX and rapidly implementing 
-a CRUD process with minimal FE enforts --->
+<!--- 
+1.  Problem: how can I UI GRID w/ inline subgrid that will do inline edit, post, read, delete AJAX calls to BE in under an hour?????
+    and pagination, and multiple record display and refresh 
+2. Solution: GET up and running quickly using customizable grid for displaying records using AJAX and rapidly implementing 
+a CRUD process with minimal FE enforts
+3. This works with the the other basic one stop shopping model posted.
+   a. This grid Ajax posts the the controller
+   b. the controller validates and posts to the model
+   c. The model furhter filters and validates  and does its conditional CRUD
+   
+ There: Quick and dirty Proof of concept
+--->
 
 
 
@@ -20,8 +30,8 @@ a CRUD process with minimal FE enforts --->
 		            jQuery("#somedivnamebelow").jqGrid(   
 		            
 		            		 { 
-							  	url		:		'http://localhost/localPathsomethingscontroller/getsomethingsdata', //CFC that will return the users
-		        				datatype:   	'json', //We specify that the datatype we will be using will be JSON
+							url:   'http://localhost/localPathsomethingscontroller/getsomethingsdata', //CFC that will return the users
+		        				datatype:  'json', //We specify that the datatype we will be using will be JSON
 		        				 
 		        				// STEP 1   must match the the number of col items
 		        				colNames:   	[   'id', 'something Name'   ], //Column Names
@@ -36,8 +46,8 @@ a CRUD process with minimal FE enforts --->
 						    
 						    
 							 	viewrecords: 	true,
-	                            gridview: 		true,
-	                            pager:      	$('#pager'), //The div we have specified, tells jqGrid where to put the pager
+	                        		 gridview: 		true,
+	                            		pager:      	$('#pager'), //The div we have specified, tells jqGrid where to put the pager
 	            				rowNum:     	15, //Number of records we want to show per page
 	            				rowNewHiresGrid:    	[20,30,40,50], //Row NewHiresGrid, to allow user to select how many rows they want to see per page  no values = disabled
 	            				sortorder:  	"asc",  //'desc',      //Default sort order
