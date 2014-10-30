@@ -15,14 +15,14 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class refreshGoogleToken extends CI_Model {
  
    public  function getNewToken(){
-        
-			$sTokenURL			= "https://accounts.google.com/o/oauth2/token";
+        //default params
+			$sTokenURL		= "https://accounts.google.com/o/oauth2/token";
 			$sRefreshToken 		= "refreshtoken";
-			$sClientID			= "id";
+			$sClientID		= "id";
 			$sClient_secret		= "clientsecre";
 			$sGrant_type		= "refresh_token";
  
-
+	//make array
 			$aParms=array(
 			    'refresh_token' 	=>$sRefreshToken,
 			    'client_id'     	=>$sClientID,
@@ -30,7 +30,7 @@ class refreshGoogleToken extends CI_Model {
 			    'grant_type'		=>$sGrant_type
 				);
  
-  
+   	//use CURL to get token
 		 	$cURL=curl_init();
 			curl_setopt($cURL,CURLOPT_URL,$sTokenURL);
 			curl_setopt($cURL,CURLOPT_SSL_VERIFYPEER,TRUE);
@@ -41,10 +41,9 @@ class refreshGoogleToken extends CI_Model {
 			$cResponse=trim(curl_exec($cURL));
 			$sError=curl_error($cURL);
 			curl_close($cURL);
-  
+  	//JSON decode response
 		 return json_decode($cResponse);
- 
- 
+  
     }// END FUNCTION
 
 }  //END CLASS
