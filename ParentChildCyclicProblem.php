@@ -126,7 +126,7 @@ a =child   1
 		try {
 
 			//1. DB Connection 
-			dbmodel(); 															// get db connection
+		        $this->dbmodel(); 															// get db connection
 
 
 			//SQL: MASTER: get all parent child relationships as datasource for linked list as implemented  or associative array
