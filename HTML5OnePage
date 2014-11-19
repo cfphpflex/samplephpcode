@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<!-- Basic Page Needs
+		================================================== -->
+		<meta charset="utf-8">
+		<title>NewsMaker</title>
+		<meta name="description" content="NewsMaker">
+		<meta name="author" content="Little NEKO">
+		<!-- Mobile Specific Metas
+		================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!-- CSS
+		================================================== -->
+		<!-- Bootstrap  -->
+		<link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<!-- web font  -->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" rel="stylesheet" type="text/css">
+		<!-- plugin css  -->
+		<link rel="stylesheet" type="text/css" href="js-plugin/animation-framework/animate.css" />
+		<link rel="stylesheet" type="text/css" href="js-plugin/magnific-popup/magnific-popup.css" />
+		<link type="text/css" rel="stylesheet" href="js-plugin/isotope/css/style.css">
+		<link rel="stylesheet" type="text/css" href="js-plugin/flexslider/flexslider.css" />
+		<link rel="stylesheet" type="text/css" href="js-plugin/pageSlide/jquery.pageslide.css" />
+		<!-- Owl carousel-->
+		<link rel="stylesheet" href="js-plugin/owl.carousel/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="js-plugin/owl.carousel/owl-carousel/owl.theme.css">
+		<!-- icon fonts -->
+		<link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons.css">
+		<link type="text/css" rel="stylesheet" href="font-icons/custom-icons/css/custom-icons-ie7.css">
+		<!-- Custom css -->
+		<link type="text/css" rel="stylesheet" href="css/layout.css">
+		<link type="text/css" id="colors" rel="stylesheet" href="css/colors.css">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+		<script src="js/modernizr-2.6.1.min.js"></script>
+		<!-- Favicons
+		================================================== -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+	</head>
+	<body data-spy="scroll" data-target="#scrollTarget" data-offset="150">
+		<!-- Primary Page Layout 
+		================================================== -->
+		<!-- globalWrapper -->
+		<div id="globalWrapper" class="localscroll">
+			<!-- header -->
+			<header id="mainHeader" class="navbar-fixed-top" role="banner">
+				<div class="container">
+					<nav class="navbar navbar-default scrollMenu" role="navigation">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+							<a class="navbar-brand" href="index.html"><img src="images/main-logo.svg" alt="Ashley website template"/></a> </div>
+							<div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
+								<ul class="nav navbar-nav pull-right">
+									<li class="active"><a href="#home"><i class="icon-home-outline"></i>Home</a> </li>
+									<li><a href="#services"><i class="icon-thumbs-up"></i>Platform</a> </li>
+									<!--
+<li><a href="#about"><i class="icon-star"></i>Buyers</a> </li>
+									<li><a href="#about"><i class="icon-star"></i>Consumers</a> </li>
+-->
+									<li><a href="#team"><i class="icon-users"></i>Team</a> </li>
+									<!-- <li><a href="#news"><i class="icon-comment"></i>Newsroom</a> </li> -->
+									<li><a href="#contactSlice"><i class="icon-mail"></i>Contact</a> </li>
+									<li><a href="http://localhost/servino/codeigniterMaster/index.php?/servinologin"><i class="icon-mail"></i>Login</a> </li>
+									
+									
+									
+									
+									
+								</ul>
+							</div>
+
+						</nav>
+					</div>
+				</header>
+				<!-- header -->
+				<!-- content -->
+				<section id="home" data-stellar-background-ratio="0.5">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 col-sm-6">
+								<div class="flexslider" id="flexHome">
+									<ul class="slides">
+										<li>
+											<h1>TARGETED Marketing</h1>
+											<h2>Slice & dice your audience engagement strategy to attract people  predisposed to using your services.</h2>
+										</li>
+										<li>
+											<h1>SIMPLE MARKETING </h1>
+											<h2>Built for consumers & marketers, by time-tested industry strategists.</h2>
+										</li>
+										<li>
+											<h1>ONLINE Marketing.</h1>
+											<h2>Get more personal, more precise messaging with NewsMaker.</h2>
+										</li>
+									</ul>
+								</div> 
+							</div>
+							<div class="col-lg-5 col-sm-6 hidden-xs">
+								<img src="images/clariture/NewsMaker-Device-Hero-Shot-v2.png" alt="Ashley, Bootstrap website template" class="img-responsive"/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- call to action -->
+				<!--
+<section class="color4 slice">  
+								<div class="ctaBox ctaBoxFullwidth">
+									<div class="container">
+										<div class="row">
+										<div class="col-md-12">
+											<h1>
+												<strong>“Our goal is to grow volumes and increase consumer engagement, and it is clear NewsMaker can help us achieve that in new ways.”</strong> - MARISSA CHACHRA, Urgent Team
+											</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+				</section>
+-->
+				<!-- call to action -->
+				
+				<!-- services -->
+				<section class="slice color1" id="services">
+
+					<!-- platform -->
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<h1>THE NEWSMAKER Way!</h1>
+								<h2 class="subTitle">The smartest path to more impressions, clicks, & conversions.</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="row boxFeature">
+									<div class="col-xs-3">
+										<i class="icon-user-add iconBig"></i>
+									</div>
+									<div class="col-xs-9">
+										<h2>Attract</h2>
+										<p>NewsMaker is the shortest path to more impressions, clicks, &  conversions. Leveraging your current customers to convert new customers via their personal network, brand and recognition  It’s elegant & simple.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="row boxFeature">
+									<div class="col-xs-3">
+										<i class="icon-loop iconBig"></i>
+									</div>
+									<div class="col-xs-9">
+										<h2>Retain</h2>
+										<p>NewsMaker enables you to securely leverage your customer’s contact information to drive customer engagement and retention. Enhance&nbsp;your existing customer relationships by building automated campaigns for ongoing conversations, which drives retention, boosts satisfaction and generates word-of-mouth marketing over time.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="row boxFeature">
+									<div class="col-xs-3">
+										<i class="icon-chart-bar iconBig"></i>
+									</div>
+									<div class="col-xs-9">
+										<h2>Analysze</h2>
+										<p>Cross-channel online marketing is complex. NewsMaker’s data-driven approach unifies and simplifies&nbsp;cross-channel marketing. Our healthcare marketing platform continually helps you optimize your campaigns in real-time. Also, the more you use NewsMaker, the smarter it gets, and the more successful you become! An easy-to-use dashboard allows you to track results by ad, by channel and by campaign – all in real-time.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="row boxFeature">
+									<div class="col-xs-3">
+										<i class="icon-upload-cloud iconBig"></i>
+									</div>
+									<div class="col-xs-9">
+										<h2>Better Results through Powerful Data.</h2>
+										<p>The secret to effective online marketing is targeting the right message to the right person in their preferred channel, and powerful data makes that possible. Our patent-pending technology allows you to build more refined customer profiles that can be hyper-targeted with digital, social and mobile advertising. NewsMaker’s real-time, high-performance customer profiling engine results in personal, precise ads that are far more effective than traditional advertising.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				
+
+					<section class="slice" id="team">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12">
+									<h1>Meet our team</h1>
+									<h2 class="subTitle">NewsMaker harnesses significant collective experience</h2>
+									<h2>Our Staff</h2>
+								</div>
+
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio_s1_dhightower.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/egaytan.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Emiliano Gaytan </h3>
+												<!-- <p>Founder & CEO</p> -->
+											</div>
+											<div class="boxContent">
+												<ul class="socialNetwork mt15">
+													<li><a href="http://www.linkedin.com/in/danielhightower" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+												</ul>
+											</div>
+										</a>
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio_s2_msapp.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/mjacobs.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Mark Jacobs</h3>
+												<!-- <p>VP, Product & Engineering</p> -->
+											</div>
+											<div class="boxContent">
+												<ul class="socialNetwork mt15">
+													<li><a href="http://www.linkedin.com/in/marksapp.png" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+													</li>
+												</ul>
+											</div>
+										</a>	
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio_s3_jsnyder.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/jlucas.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Jonathan Lucas Snyder</h3>
+												<!-- <p>Sr. Developer</p> -->
+											</div>
+											<div class="boxContent">
+												<ul class="socialNetwork mt15">
+													<li><a href="http://www.linkedin.com/in/clariturejeff" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+												</ul>
+											</div>
+										</a>	
+									</article>
+								</div>
+								<!--
+<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio_s4_bmaqsood.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/bmaqsood.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Babar Maqsood</h3>
+												<p>VP, Analytics</p>
+											</div>
+											<div class="boxContent">
+												<ul class="socialNetwork mt15">
+													<li> <a href="http://www.linkedin.com/in/babarmaqsood" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i> </a></li>
+												</ul>
+											</div>
+										</a>	
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio_s4_bmaqsood.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/acass.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Amy Cass</h3>
+												<p>VP, Customer Success</p>
+											</div>
+											<div class="boxContent">
+												<ul class="socialNetwork mt15">
+													<li> <a href="https://www.linkedin.com/pub/amy-cass/1b/55/251" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i> </a></li>
+												</ul>
+											</div>
+										</a>	
+									</article>
+								</div>
+-->
+							</div>
+							<div class="row" id="board">
+								<div class="col-xs-12">
+									<h2>Our Board</h2>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio1_cmartin.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/mgrove.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Michael Grove </h3>
+											</div>
+										</a>
+									</article>
+								</div>
+								<!--
+<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio2_dcarty.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/dcarty.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Devin Carty</h3>
+											</div>
+										</a>								
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio3_mwhitney.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/mwhitney.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Marcus Whitney</h3>
+											</div>
+										</a>											
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio4_lwilkinson.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/lwilkinson.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Les Wilkinson</h3>
+											</div>
+										</a>										
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio5_tsimpson.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/tsimpson.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Tony Simpson</h3>
+											</div>
+										</a>
+									</article>
+								</div>
+								<div class="col-sm-6 col-md-3">
+									<article>
+										<a href="portfolio-project-fullwidth-image_bio6_tpetrikin.html" title="link" class="sizer portfolioSheet animated flipOutX">
+											<div><img src="images/clariture/headshots/tpetrikin.png" alt="" class="img-responsive"></div>
+											<div class="boxContent color4">
+												<h3>Tim Petrikin</h3>
+											</div>
+										</a>
+									</article>
+								</div>
+-->
+							</div>
+						</div>
+					</section>
+
+					<div id="paralaxSlice4" data-stellar-background-ratio="0.5" >
+						<div class="maskParent">
+							<div class="paralaxMask"></div>
+
+							<div class="paralaxText">
+								<blockquote>Keep in touch with us</blockquote>
+
+							</div>
+						</div>
+					</div>
+					<section class="slice"  id="contactSlice" >
+						<div class="container">
+							<div class="row">
+
+							<div class="col-sm-12">
+								<h1 class="noSubtitle">Contact us</h1>
+							</div>
+							<div class="col-sm-12">
+							<div id="mapWrapper" class="mb30"></div>
+						</div>
+								<div class="col-sm-4">
+									<h4>Address:</h4>
+									<address>
+										NewsMaker<br />
+										2332 San Pablo Blvd <br />
+										San Pablo, CA 94116 <br />
+									</address>
+									<!-- <h4>Phone:</h4>
+									<address>
+										xxx.xxx.xxxx<br/>
+									</address> -->
+								</div>
+								<form method="post" action="js-plugin/neko-contact-ajax-plugin/php/form-handler.php" id="contactfrm" role="form">
+
+									<div class="col-sm-4"> 
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input type="text" class="form-control" name="name" id="name" placeholder="Enter name"  title="Please enter your name (at least 2 characters)"/>
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
+										</div>
+										<div class="form-group">
+											<label for="phone">Phone</label>
+											<input name="phone" class="form-control required digits" type="tel" id="phone" size="30" value="" placeholder="Enter email phone" title="Please enter a valid phone number (at least 10 characters)">
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="form-group">
+											<label for="comments">Comments</label>
+											<textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+										</div>
+										<fieldset class="clearfix securityCheck">
+											<legend>Security</legend>
+											<div class="form-group">
+												<img src="js-plugin/neko-contact-ajax-plugin/php/image.php" alt="Image verification" id="verifyImg"/>
+												<input class="required form-control"  id="verify" name="verify" type="text" >
+											</div>
+										</fieldset>
+									</div>                        
+									<div class="col-md-8 col-md-offset-4">
+										<div class="result"></div>
+										<button name="submit" type="submit" class="btn btn-lg" id="submit"> Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</section>
+
+					<!-- content -->
+					<!-- footer -->
+					<footer>
+						<section id="mainFooter">
+							<div class="container" id="footer">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="footerWidget">
+											
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="footerWidget">
+
+											<h3>NewsMaker</h3>
+											<address>
+												<p> <i class="icon-location"></i>&nbsp;40 Burton Hills Blvd.,<br />Suite 100<br />
+													Nashville, TN 37215<br />
+													<i class="icon-phone"></i>&nbsp;615.829.7300 <br>
+													<i class="icon-mail-alt"></i>&nbsp;<a href="mailto:info@clariturehealth.com">info@clariturehealth.com</a> </p>
+												</address>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</footer>
+						<section  id="footerRights">
+							<div class="container">
+								<div class="row">
+									<div class="col-sm-6">
+										<p>Copyright © 2014 NewsMaker / All rights reserved.</p>
+									</div>
+									<div class="col-sm-6">
+										<ul class="socialNetwork pull-right">
+											<li><a href="https://www.facebook.com/clariturehealth" class="tips" title="follow us on Facebook"><i class="icon-facebook-1 iconRounded"></i></a></li>
+
+											<li><a href="https://twitter.com/NewsMakerNews" class="tips" title="follow us on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
+
+											<li><a href="https://plus.google.com/114329283572859914563" class="tips" title="follow us on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+
+											<li><a href="http://www.linkedin.com/company/clariture-health" class="tips" title="follow us on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+										</ul>     
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- End footer -->
+					</div>
+					<!-- global wrapper -->
+		<!-- End Document 
+		================================================== -->
+		<script type="text/javascript" src="js-plugin/respond/respond.min.js"></script>
+		<script type="text/javascript" src="js-plugin/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js-plugin/jquery-ui/jquery-ui-1.8.23.custom.min.js"></script>
+		<!-- third party plugins  -->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="js-plugin/easing/jquery.easing.1.3.js"></script>
+
+		<script type="text/javascript" src="js-plugin/flexslider/jquery.flexslider-min.js"></script>
+
+		<script type="text/javascript" src="js-plugin/isotope/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="js-plugin/neko-contact-ajax-plugin/js/jquery.form.js"></script>
+		<script type="text/javascript" src="js-plugin/neko-contact-ajax-plugin/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js-plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="js-plugin/parallax/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+		<script type="text/javascript" src="js-plugin/parallax/js/jquery.localscroll-1.2.7-min.js"></script>
+		<script type="text/javascript" src="js-plugin/parallax/js/jquery.stellar.min.js"></script>
+		<!-- <script type="text/javascript" src="js-plugin/smoothscroll/SmoothScroll.js"></script> -->
+		<script type="text/javascript" src="js-plugin/pageSlide/jquery.pageslide-custom.js"></script>
+		<script type="text/javascript" src="js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>
+
+		<script type="text/javascript" src="js-plugin/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
+
+
+		<!-- Custom  -->
+		<script type="text/javascript" src="js/custom.js"></script>
+		<!-- Quantcast Tag -->
+		<script type="text/javascript">
+		var _qevents = _qevents || [];
+
+		(function() {
+		var elem = document.createElement('script');
+		elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+		elem.async = true;
+		elem.type = "text/javascript";
+		var scpt = document.getElementsByTagName('script')[0];
+		scpt.parentNode.insertBefore(elem, scpt);
+		})();
+
+		_qevents.push({
+		qacct:"p-DWNF7R4-wf005"
+		});
+		</script>
+
+		<noscript>
+		<div style="display:none;">
+		<img src="//pixel.quantserve.com/pixel/p-DWNF7R4-wf005.gif" border="0" height="1" width="1" alt="Quantcast"/>
+		</div>
+		</noscript>
+		<!-- End Quantcast tag -->
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-49862833-1', 'clariturehealth.com');
+		  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		</script>
+
+		<script type="text/javascript">
+		adroll_adv_id = "ONMP66CHOFEWZD2BYEFKPF";
+		adroll_pix_id = "5IXRCOX7YZCDBGITF2B2KR";
+		(function () {
+		var oldonload = window.onload;
+		window.onload = function(){
+		__adroll_loaded=true;
+		var scr = document.createElement("script");
+		var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+		scr.setAttribute('async', 'true');
+		scr.type = "text/javascript";
+		scr.src = host + "/j/roundtrip.js";
+		((document.getElementsByTagName('head') || [null])[0] ||
+		document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+		if(oldonload){oldonload()}};
+		}());
+		</script>
+	</body>
+	</html>
