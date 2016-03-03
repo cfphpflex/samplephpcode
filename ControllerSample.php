@@ -23,7 +23,6 @@ class Somethingcontroller extends CI_Controller {
        public function getSomethingdata()
 	 {
 	      $this->load->model('GETMODEL'); 
-	      //$this->load->view('SOMEFILE.php', $this);
 	      $this->load->view('GETSOMEVIEWFILE', $this);
 	}
 	
